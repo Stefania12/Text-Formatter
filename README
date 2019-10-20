@@ -1,0 +1,143 @@
+=============================================================================
+Nume: Damian Stefania-Dorina
+Grupa: 312CD
+=============================================================================
+
+
+TEMA 2 - Formatare text
+
+    Pentru rezolvarea cerintei am facut un program in care am folosit functii
+pentru realizarea diferitelor cerinte si simplificarea codului. Pentru
+retinerea parametrilor fiecarei operatii ce trebuie aplicata am folosit 2
+vectori astfel: param_nr retine pe linie parametrii numerici (max_line_length,
+start_line, end_line, indent_length in aceasta ordine) si param_c care
+retine pe linie parametrii de tip caracter (tipul operatiei, list_type,
+special_character, ordering in aceasta ordine).
+
+    Functiile folosite si rolul acestora sunt urmatoarele:
+
+1. number:
+-primeste ca parametru un sir de caractere si intoarce numarul aferent
+sau -1 daca sirul nu reprezinta un numar valid
+
+2. make_string:
+-converteste un numar intreg pozitiv in sir de caractere
+
+3. longest_word_length:
+-returneaza lungimea celui mai lung cuvant
+
+4. longest_line_length:
+-retuneaza lungimea celei mai lungi linii din matricea de caractere
+
+5. validation_W:
+-verifica daca, pentru operatia Wrap, numarul parametrilor este corect si daca
+parametrii sunt valizi
+-completeaza linia n din vectorul param_nr cu valorile parametrilor
+
+6. validation_CLRJ:
+-verifica daca, pentru operatiile Center text, Align left, Align right si
+Justify, numarul parametrilor este corect si daca parametrii sunt valizi
+-completeaza linia n din vectorul param_nr cu valorile parametrilor
+
+7. validation_P:
+-verifica daca, pentru operatia Paragrafe, numarul parametrilor este corect si
+daca parametrii sunt valizi
+-completeaza linia n din vectorul param_nr cu valorile parametrilor
+
+8. separate_n_param:
+-separa primii n (2 sau 3) parametrii de tip caracter de restul parametrilor
+-functia este folosita pentru a usura gasirea parametrilor operatiilor Liste
+si Liste ordonate
+
+9. validation_I:
+-verifica daca, pentru operatia Liste, numarul parametrilor este corect si daca
+parametrii sunt valizi
+-completeaza linia n din vectorii param_c si param_nr cu valorile parametrilor
+
+10. validation_O:
+-verifica daca, pentru operatia Liste ordonate, numarul parametrilor este
+corect si daca parametrii sunt valizi
+-completeaza linia n din vectorii param_c si param_nr cu valorile parametrilor
+
+11. validate_op_type:
+-returneaza 1 daca operatia are formatul corect si 0 in caz contrar
+-trece tipul operatiei n in vectorul param_c
+
+12. validate_operation:
+-returneaza 1 daca operatia este valida, 0 daca este invalida si 2 daca
+operatia este goala ("")
+
+13. validate_operations:
+-verifica daca fiecare operatie este valida, intoarce numarul operatiilor
+(cel mult 10) ai caror parametrii ii trece in vectorii param_c si param_nr
+-afiseaza mesajele de eroare necesare
+
+14. no_trailing_whitespaces:
+-elimina spatiile si taburile de la finalul liniei primite ca parametru
+
+15. no_starting_whitespaces:
+-elimina spatiile si taburile de la inceputul liniei primite ca parametru
+
+16. complete_lines:
+-completeaza liniile din matricea rezultat cu cel mult max_length caractere
+care sunt retinute in buffer (care pastreaza cate 2 linii concatenate sau
+prima linie din paragraf) cat timp buffer are mai multe caractere decat
+valoarea lui max_length
+
+17. Wrap:
+-realizeaza opreratia Wrap
+
+18. Center_text:
+-centreaza liniile din intervalul [start_line, end_line] adaugand spatii la
+inceput
+
+19. Align_left:
+-sterge spatiile de la inceputul liniilor din intervalul [start_line, end_line]
+
+20. Align_right:
+-aliniaza la dreapta liniile din intervalul [start_line, end_line] adaugand
+spatii la inceput
+
+21. elim_extra_spaces:
+-elimina spatiile si taburile de la inceputul si sfarsitul sirului de caractere
+-transforma grupurile de spatii si taburi dintre oricare 2 cuvinte intr-un
+singur spatiu
+
+22. add_spaces:
+-adauga cate un spatiu la fiecare grupare de spatii dintre oricare 2 cuvinte
+
+23. Justify:
+-realizeaza operatia Justify pentru liniile din intervalul
+[start_line, end_line] adaugand spatiile necesare intre cuvinte
+
+24. Paragraphs:
+-indenteaza paragrafele din intervalul [start_line, end_line]
+
+25. Lists:
+-transforma liniile din intervalul [start_line, end_line] in liste in functie
+de tipul lor (numerotate, alfabetice sau bullet lists)
+
+24. swap:
+-realizeaza interschimbarea a 2 linii din matricea de caractere
+
+25. pivot:
+-returneaza pivotul folosit in functia quicksort si realizeaza interschimbarile
+necesare de linii
+
+26. quicksort:
+-realizeaza ordonarea alfabetica normala a liniilor matricei de caractere
+
+27. reverse_pivot:
+-returneaza pivotul folosit in functia reverse_quicksort si realizeaza
+interschimbarile necesare de linii
+
+28. reverse_quicksort:
+-realizeaza ordonarea alfabetica inversa a liniilor matricei de caractere
+
+29. Ordered_lists:
+-transforma liniile din intervalul [start_line, end_line] (dupa ce au fost
+sortate corespunzator) in liste ordonate in functie de tipul lor 
+(numerotate, alfabetice sau bullet lists)
+
+30. apply_operation:
+-aplica operatia ceruta
